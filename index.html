@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -100,12 +101,16 @@
     </div>
 
     <h2>Direct een Klus Boeken of Info Vragen</h2>
-    <form onsubmit="alert('Bedankt! Je bericht is verzonden naar Dylan. Tijd om die DJI Neo te cashen!'); return false;">
+    
+    <form action="https://formspree.io/f/xykaadpg" method="POST">
         <label for="naam">Uw Naam / Your Name:</label>
-        <input type="text" id="naam" required placeholder="Bijv. Familie Janssen / Smith">
+        <input type="text" id="naam" name="naam" required placeholder="Bijv. Familie Janssen / Smith">
+
+        <label for="telefoon">Uw Telefoonnummer / Phone number:</label>
+        <input type="tel" id="telefoon" name="telefoon" required placeholder="Bijv. 0412 34 56 78">
 
         <label for="dienst">Wat heeft u nodig? / Service:</label>
-        <select id="dienst">
+        <select id="dienst" name="dienst">
             <option>Huizen & Dierenoppas (€12,50/dag)</option>
             <option>Honden uitlaatservice (€5,50/keer)</option>
             <option>Tuinen & stoepen netjes maken (€12,50/uur)</option>
@@ -113,7 +118,7 @@
         </select>
 
         <label for="bericht">Bericht / Message:</label>
-        <textarea id="bericht" rows="4" placeholder="Wanneer gaat u op vakantie?"></textarea>
+        <textarea id="bericht" name="bericht" rows="4" placeholder="Wanneer gaat u op vakantie? En wat zijn de details?" required></textarea>
 
         <button type="submit">Verstuur Aanvraag 💸</button>
     </form>
