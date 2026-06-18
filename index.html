@@ -32,14 +32,14 @@
 
         header h1 { 
             margin: 0; 
-            font-size: 2.8em; 
+            font-size: 2.5em; 
             font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         header p { 
             margin: 12px 0 0; 
-            font-size: 1.3em; 
+            font-size: 1.2em; 
             opacity: 0.9;
             font-weight: 300;
         }
@@ -57,7 +57,7 @@
             color: var(--primary-dark); 
             border-bottom: 2px solid #eef2f5; 
             padding-bottom: 10px;
-            font-size: 1.6em;
+            font-size: 1.5em;
             margin-top: 40px;
         }
 
@@ -91,9 +91,10 @@
         }
 
         .service-card p.desc {
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #64748b;
             margin: 0 0 15px 0;
+            line-height: 1.4;
         }
 
         .price { 
@@ -178,66 +179,77 @@
 
 <header>
     <h1>Dylan's Klusjes & Oppasservice</h1>
-    <p>Betrouwbare hulp in de buurt van de Rozendalstraat, Tervuren!</p>
+    <p>Rozendalstraat, Tervuren | NL • EN • FR</p>
 </header>
 
 <div class="container">
-    <h2>Mijn Diensten & Tarieven (NL / EN)</h2>
+    <h2>Diensten & Tarieven / Services & Tarifs</h2>
     <div class="services">
         <div class="service-card">
-            <h3>🐾 Huizen & Dieren</h3>
-            <p class="desc">Oppassen op uw huis en huisdieren tijdens uw vakantie.</p>
+            <h3>🐾 Dieren & Huizen</h3>
+            <p class="desc">
+                NL: Oppassen tijdens uw vakantie.<br>
+                EN: House & pet sitting.<br>
+                FR: Garde de maison et d'animaux.
+            </p>
             <p class="price">€12,50 / dag</p>
         </div>
         <div class="service-card">
-            <h3>🦮 Honden Uitlaten</h3>
-            <p class="desc">Een frisse wandeling voor uw hond wanneer u weinig tijd heeft.</p>
+            <h3>🦮 Honden / Dogs / Chiens</h3>
+            <p class="desc">
+                NL: Een frisse wandeling.<br>
+                EN: Dog walking service.<br>
+                FR: Promenade de chiens.
+            </p>
             <p class="price">€5,50 / keer</p>
         </div>
         <div class="service-card">
-            <h3>🏡 Tuin & Stoep</h3>
-            <p class="desc">Onkruid wieden, bladeren harken of de stoep netjes vegen.</p>
+            <h3>🏡 Tuin / Garden / Jardin</h3>
+            <p class="desc">
+                NL: Onkruid wieden of harken.<br>
+                EN: Garden help & weeding.<br>
+                FR: Aide au jardinage et désherbage.
+            </p>
             <p class="price">€12,50 / uur</p>
         </div>
     </div>
 
-    <h2>Direct een Klus Boeken of Info Vragen</h2>
+    <h2>Contact / Boeken / Réserver</h2>
     
     <form action="https://formspree.io/f/xykaadpg" method="POST">
-        <!-- Zorgt ervoor dat mensen na het verzenden netjes een melding krijgen -->
         <input type="hidden" name="_next" value="https://kleindylan-hash.github.io/tervuren-klusjes/">
         
         <div class="form-group">
-            <label for="naam">Uw Naam / Your Name:</label>
-            <input type="text" id="naam" name="naam" required placeholder="Bijv. Familie Janssen / Smith">
+            <label for="naam">Naam / Name / Nom:</label>
+            <input type="text" id="naam" name="naam" required placeholder="Bijv. Familie Janssen / Smith / Dupont">
         </div>
 
         <div class="form-group">
-            <label for="telefoon">Uw Telefoonnummer / Phone number:</label>
+            <label for="telefoon">Telefoon / Phone / Téléphone:</label>
             <input type="tel" id="telefoon" name="telefoon" required placeholder="Bijv. 0412 34 56 78">
         </div>
 
         <div class="form-group">
-            <label for="dienst">Wat heeft u nodig? / Service:</label>
+            <label for="dienst">Service:</label>
             <select id="dienst" name="dienst">
-                <option value="Huizen & Dieren">Huizen & Dierenoppas / House & Pet sitting (€12,50/dag)</option>
-                <option value="Honden uitlaten">Honden uitlaatservice / Dog walking (€5,50/keer)</option>
-                <option value="Tuin & Stoep">Tuinen & stoepen netjes maken / Garden help (€12,50/uur)</option>
-                <option value="Iets anders">Iets anders / Other</option>
+                <option value="Huizen & Dieren">🐾 Dieren & Huis / Pet & House sitting / Garde d'animaux (€12,50/j)</option>
+                <option value="Honden uitlaten">🦮 Honden / Dog walking / Promenade de chiens (€5,50)</option>
+                <option value="Tuin & Stoep">🏡 Tuin & Stoep / Garden help / Jardin (€12,50/h)</option>
+                <option value="Iets anders">Iets anders / Other / Autre</option>
             </select>
         </div>
 
         <div class="form-group">
             <label for="bericht">Bericht / Message:</label>
-            <textarea id="bericht" name="bericht" rows="5" placeholder="Wanneer heeft u hulp nodig? Voeg eventuele details hier toe..." required></textarea>
+            <textarea id="bericht" name="bericht" rows="5" placeholder="NL: Wanneer heeft u hulp nodig?&#10;EN: When do you need help?&#10;FR: Quand avez-vous besoin d'aide?" required></textarea>
         </div>
 
-        <button type="submit">Verstuur Aanvraag 💸</button>
+        <button type="submit">Verstuur / Send / Envoyer 💸</button>
     </form>
 </div>
 
 <footer>
-    &copy; 2026 Dylan's Klusjesservice Tervuren. Alle rechten voorbehouden.
+    &copy; 2026 Dylan's Klusjesservice Tervuren.
 </footer>
 
 </body>
